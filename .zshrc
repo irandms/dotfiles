@@ -1,6 +1,14 @@
 export DEFAULT_USER=irandms
+source .aliases
+
+# pl9k
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+
+# oh-my-zsh stuff
+
+
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/irandms/.oh-my-zsh
+export ZSH=/home/irandms/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/

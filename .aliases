@@ -1,0 +1,5 @@
+alias batstat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
+alias lla="ls -lah"
+alias l.="ls -d .*"
+alias c="clear"
+alias diff="colordiff"
