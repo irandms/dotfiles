@@ -1,0 +1,85 @@
+[global_config]
+  borderless = True
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  geometry_hinting = False
+  scroll_tabbar = True
+  title_font = Inconsolata Medium 9
+  title_hide_sizetext = True
+  title_transmit_bg_color = "#000000"
+  title_transmit_fg_color = "#c0bebf"
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = b4dfa38d-70e4-411c-984d-dc0dee0dff7d
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 0:27
+      size = 722, 450
+      title = weechat 0.4.2
+      type = Window
+    [[[terminal1]]]
+      order = 0
+      parent = child0
+      profile = default
+      type = Terminal
+      uuid = b4dfa38d-70e4-411c-984d-dc0dee0dff7d
+  [[fshdh]]
+    [[[child0]]]
+      fullscreen = True
+      last_active_term = b4dfa38d-70e4-411c-984d-dc0dee0dff7d
+      last_active_window = True
+      maximised = False
+      order = 0
+      parent = ""
+      position = 0:0
+      size = 1920, 1080
+      title = weechat 0.4.2
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 536
+      ratio = 0.498611111111
+      type = VPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 956
+      ratio = 0.49921875
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = b4dfa38d-70e4-411c-984d-dc0dee0dff7d
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 7041fe26-757c-4d5e-9a0c-ba2eee75e082
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 79faf294-1bf8-419d-98ce-aa0ef4723359
+[plugins]
+[profiles]
+  [[default]]
+    background_image = None
+    font = Inconsolata Medium 12
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    use_system_font = False
+  [[solarized]]
+    background_color = "#002b36"
+    background_image = None
+    foreground_color = "#839496"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
