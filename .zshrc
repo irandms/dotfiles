@@ -1,5 +1,6 @@
 export DEFAULT_USER=irandms
-source .aliases
+source ~/.aliases
+setopt extended_glob
 
 # pl9k
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
