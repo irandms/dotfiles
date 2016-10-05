@@ -11,7 +11,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 set hidden
 set title
 set nowrap
-set number
+set rnu
 syntax on
 
 " no beeps and boops
