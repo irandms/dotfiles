@@ -1,4 +1,5 @@
 set nocompatible
+execute pathogen#infect()
 
 " change from \ to , for commands
 let mapleader=","
@@ -12,7 +13,9 @@ set hidden
 set title
 set nowrap
 set rnu
+set nu
 syntax on
+colorscheme badwolf
 
 " no beeps and boops
 set visualbell
