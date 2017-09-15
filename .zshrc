@@ -1,8 +1,7 @@
 export DEFAULT_USER=irandms
 source ~/.aliases
 export CFLAGS="-Wall -Wpedantic -Werror"
-setopt extended_glob
-
+setopt extended_glob 
 # pl9k
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 
@@ -16,8 +15,8 @@ export ZSH=/home/irandms/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sonicradish"
-#ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="sonicradish"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 #ZSH_THEME="linuxonly"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -66,8 +65,11 @@ plugins=(git catimg common-aliases dnf)
 
 # User configuration
 
-export PATH="/usr/lib64/qt-3.3/bin:/usr/lib64/ccache:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/irandms/.local/bin:/home/irandms/bin"
+export PATH=$PATH:/home/irandms/.local/bin:/home/irandms/bin:/home/irandms/.cargo/bin:/usr/local/diamond/3.9_x64/bin/lin64:/opt/intel/intelFPGA_lite/16.1/modelsim_ase/bin
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 # export MANPATH="/usr/local/man:$MANPATH"
+export DEVKITPRO=/home/irandms/devkitPro
+export DEVKITARM=/home/irandms/devkitPro/devkitARM
 
 source $ZSH/oh-my-zsh.sh
 

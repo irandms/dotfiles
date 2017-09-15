@@ -17,6 +17,8 @@ set nu
 syntax on
 colorscheme badwolf
 
+set mouse=a
+
 " no beeps and boops
 set visualbell
 set noerrorbells
@@ -45,8 +47,8 @@ set shiftround
 set smarttab
 
 " Bigger history
-set history=1000
-set undolevels=1000
+set history=10000
+set undolevels=10000
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o
 
 filetype plugin indent on
@@ -69,8 +71,20 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" filetype stuff
+
 " Clear search buffer by presssing ,/
 nmap <silent> ,/ :nohlsearch<CR>
 
 " did you forget to use sudo? use w!!
 cmap w!! w !sudo tee % >/dev/null
+
+
+set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls']
+    \}
+
+let g:LanguageClient_autostart = 1
+
