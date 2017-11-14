@@ -1,14 +1,16 @@
 [global_config]
   borderless = True
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  geometry_hinting = False
   scroll_tabbar = True
-  title_font = Inconsolata Medium 9
+  title_font = Inconsolata Medium 12
   title_hide_sizetext = True
-  title_transmit_bg_color = "#000000"
-  title_transmit_fg_color = "#c0bebf"
+  title_inactive_bg_color = "#000000"
+  title_inactive_fg_color = "#c0bebf"
+  title_transmit_bg_color = "#c0bebf"
+  title_transmit_fg_color = "#000000"
   title_use_system_font = False
 [keybindings]
+  help = <Primary>F1
 [layouts]
   [[default]]
     [[[child0]]]
@@ -28,58 +30,67 @@
       profile = default
       type = Terminal
       uuid = b4dfa38d-70e4-411c-984d-dc0dee0dff7d
-  [[fshdh]]
+  [[IDE]]
     [[[child0]]]
-      fullscreen = True
-      last_active_term = b4dfa38d-70e4-411c-984d-dc0dee0dff7d
+      fullscreen = False
+      last_active_term = e47ee0dd-ddcd-40e7-9207-58c6cf82e4ef
       last_active_window = True
-      maximised = False
+      maximised = True
       order = 0
       parent = ""
-      position = 0:0
-      size = 1920, 1080
+      position = 0:27
+      size = 1920, 1053
       title = weechat 0.4.2
       type = Window
     [[[child1]]]
       order = 0
       parent = child0
-      position = 536
-      ratio = 0.498611111111
-      type = VPaned
-    [[[child3]]]
-      order = 1
-      parent = child1
-      position = 956
-      ratio = 0.49921875
+      position = 1359
+      ratio = 0.709660574413
       type = HPaned
-    [[[terminal2]]]
+    [[[child2]]]
       order = 0
       parent = child1
-      profile = default
-      type = Terminal
-      uuid = b4dfa38d-70e4-411c-984d-dc0dee0dff7d
-    [[[terminal4]]]
+      position = 772
+      ratio = 0.736641221374
+      type = VPaned
+    [[[terminal3]]]
       order = 0
-      parent = child3
+      parent = child2
       profile = default
       type = Terminal
-      uuid = 7041fe26-757c-4d5e-9a0c-ba2eee75e082
+      uuid = ae76838e-5c41-4f25-9786-7f3fe05057a3
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = 31e3d58c-3129-4f09-bb23-870b3a3de313
     [[[terminal5]]]
       order = 1
-      parent = child3
+      parent = child1
       profile = default
       type = Terminal
-      uuid = 79faf294-1bf8-419d-98ce-aa0ef4723359
+      uuid = e47ee0dd-ddcd-40e7-9207-58c6cf82e4ef
 [plugins]
 [profiles]
   [[default]]
-    background_image = None
-    font = Inconsolata Medium 12
+    background_darkness = 0.85
+    background_type = transparent
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    font = Inconsolata for Powerline Medium 16
+    foreground_color = "#ffffff"
     scrollback_infinite = True
     scrollbar_position = hidden
     use_system_font = False
-  [[solarized]]
+  [[solarized-dark]]
     background_color = "#002b36"
-    background_image = None
-    foreground_color = "#839496"
+    cursor_color = "#eee8d5"
+    foreground_color = "#eee8d5"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+  [[solarized-light]]
+    background_color = "#fdf6e3"
+    cursor_color = "#002b36"
+    foreground_color = "#657b83"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"

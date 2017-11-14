@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/irandms/ownCloud/school/completed/ece272/section4/impl1'
+let g:netrw_dirhist_2='/home/irandms/ownCloud/school/completed/ece272/section4/impl1/source'
+let g:netrw_dirhist_3='/home/irandms/.vim'
+let g:netrw_dirhist_4='/home/irandms/ownCloud/school/ece341/ece341-ap-2/Code/sketch_nov01a'
+let g:netrw_dirhist_5='/home/irandms/ownCloud/school/ece341/PoVwand/Code/sketch_oct02a'
+let g:netrw_dirhist_6='/home/irandms/ownCloud/school/ece341/PoVwand/Code'
+let g:netrw_dirhist_7='/home/irandms/ownCloud/school/ece341/PoVwand/Code/sketch_oct02a'
+let g:netrw_dirhist_8='/home/irandms/Arduino/POV'
+let g:netrw_dirhist_9='/home/irandms/ownCloud/school/ece375/lab7'
