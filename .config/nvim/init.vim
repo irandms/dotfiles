@@ -1,26 +1,20 @@
-call plug#begin('~/.vim/plugged')
-
+call plug#begin()
 Plug 'sjl/badwolf'
 Plug 'jisaacks/GitGutter'
 Plug 'neomake/neomake'
-
 Plug 'rust-lang/rust.vim'
 " LANGUAGE CLIENT
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-
 " (Optional) Multi-entry selection UI.
 Plug 'junegunn/fzf'
 " (Optional) Multi-entry selection UI.
 Plug 'Shougo/denite.nvim'
-
 " (Optional) Completion integration with deoplete.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " (Optional) Completion integration with nvim-completion-manager.
 Plug 'roxma/nvim-completion-manager'
-
 " (Optional) Showing function signature and inline doc.
 Plug 'Shougo/echodoc.vim'
-
 call plug#end()
 
 syntax on
@@ -65,6 +59,9 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 " Allow bad behavior
 noremap ; :
 
+" Shift + tab forces tab
+inoremap <S-Tab> <C-V><Tab>
+
 " Enforce good behavior
 map <up> <nop>
 map <down> <nop>
@@ -72,6 +69,12 @@ map <left> <nop>
 map <right> <nop>
 
 set pastetoggle=<F2>
+
+" Clear search buffer by pressing ,/
+nmap <silent> ,/ :nohlsearch<CR>
+
+" did you forget to use sudo? use w!!
+cmap w!! w !sudo tee % >/dev/null
 
 " LANGUAGECLIENT
 let g:LanguageClient_serverCommands = {
@@ -85,23 +88,17 @@ nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <F3> :call LanguageClient_textDocument_rename()<CR>
 
-" SYNTASTIC
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" NEOMAKE
+function! OnBattery()
+    if(filereadable('sys/class/power_supply/ACAD/online'))
+        return readfile('/sys/class/power_supply/ACAD/online') == ['0']
+    else
+        return -1
+    endif
+endfunction
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_python_python_exec = '/usr/local/bin/python3'
-
-"autocmd FileType c if stridx(expand("%:p"), "/home/irandms/ownCloud/work/embedded/") == 0 |
-"            \ let b:syntastic_checkers = ["avrgcc"] | endif
-"autocmd FileType c if stridx(expand("%:p"), "/home/irandms/ownCloud/school/ece341") == 0 |
-"            \ let b:syntastic_checkers = ["avrgcc"] | endif
-"autocmd FileType c if stridx(expand("%:p"), "/home/irandms/ownCloud/school/ece375") == 0 |
-"            \ let b:syntastic_checkers = ["avrgcc"] | endif
-"autocmd FileType asm if stridx(expand("%:p"), "/home/irandms/school/ece375") == 0 |
-"            \ let b:syntastic_checkers = ["avra"] | endif
+if OnBattery()
+    call neomake#configure#automake('w')
+else
+    call neomake#configure#automake('nw', 1000)
+endif
