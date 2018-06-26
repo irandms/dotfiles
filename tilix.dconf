@@ -1,44 +1,42 @@
 [/]
 new-window-inherit-state=true
-quake-height-percent=40
 copy-on-select=true
-sidebar-on-right=false
 auto-hide-mouse=true
-background-image-mode='scale'
-window-state=43780
-terminal-title-style='normal'
-session-name='Default${title}${hostname}'
+terminal-title-style='none'
+window-state=43908
+session-name='${title}: ${hostname}'
+paste-advanced-default=true
 control-scroll-zoom=true
-quake-hide-headerbar=false
-enable-wide-handle=false
-quake-show-on-all-workspaces=true
-theme-variant='system'
+enable-wide-handle=true
+paste-strip-first-char=true
 window-save-state=true
-focus-follow-mouse=false
 terminal-title-show-when-single=false
-window-style='borderless'
+window-style='disable-csd-hide-toolbar'
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 foreground-color='#F8F8F2'
 visible-name='Default'
-login-shell=false
 palette=['#272822', '#F92672', '#A6E22E', '#F4BF75', '#66D9EF', '#AE81FF', '#A1EFE4', '#F8F8F2', '#75715E', '#F92672', '#A6E22E', '#F4BF75', '#66D9EF', '#AE81FF', '#A1EFE4', '#F9F8F5']
 badge-color-set=false
-use-theme-colors=false
 scroll-on-output=true
 cursor-colors-set=false
 highlight-colors-set=false
 use-system-font=false
 bold-color-set=false
 font='Inconsolata for Powerline Medium 14'
-terminal-bell='icon'
-notify-silence-threshold=0
+use-theme-colors=false
 background-color='#272822'
-background-transparency-percent=17
-dim-transparency-percent=18
-scrollback-lines=65536
+background-transparency-percent=3
+dim-transparency-percent=10
 
 [keybindings]
-terminal-file-browser='disabled'
+terminal-scroll-down='<Shift><Alt>Down'
+session-resize-terminal-left='<Primary><Shift>Left'
 session-add-right='<Primary><Shift>e'
+session-resize-terminal-up='<Primary><Shift>Up'
 session-add-down='<Primary><Shift>d'
+session-resize-terminal-down='<Primary><Shift>Down'
+session-switch-to-terminal-right='<Alt>Right'
+terminal-scroll-up='<Shift><Alt>Up'
+session-resize-terminal-right='<Primary><Shift>Right'
+session-switch-to-terminal-left='<Alt>Left'

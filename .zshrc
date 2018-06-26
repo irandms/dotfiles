@@ -1,15 +1,5 @@
-export DEFAULT_USER=irandms
-source ~/.aliases
-export CFLAGS="-Wall -Wpedantic -Werror"
-setopt extended_glob 
-# pl9k
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-
-# oh-my-zsh stuff
-
-
 # Path to your oh-my-zsh installation.
-export ZSH=/home/irandms/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -64,12 +54,22 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 plugins=(git catimg common-aliases dnf)
 
 # User configuration
+source ~/.aliases
 
-export PATH=$PATH:/home/irandms/.local/bin:/home/irandms/bin:/home/irandms/.cargo/bin:/usr/local/diamond/3.9_x64/bin/lin64:/opt/intel/intelFPGA_lite/16.1/modelsim_ase/bin
+export RISCV=$HOME/riscv
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$RISCV/bin
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export DEVKITPRO=$HOME/devkitPro
+export DEVKITARM=$HOME/devkitPro/devkitARM
 # export MANPATH="/usr/local/man:$MANPATH"
-export DEVKITPRO=/home/irandms/devkitPro
-export DEVKITARM=/home/irandms/devkitPro/devkitARM
+# export CFLAGS="-Wall -Wpedantic -Werror"
+setopt extended_glob
+# pl9k
+export DEFAULT_USER=irandms
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+
+
+# oh-my-zsh stuff
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,3 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+
+export LFS=/mnt/lfs
