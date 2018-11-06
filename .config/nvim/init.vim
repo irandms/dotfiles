@@ -2,21 +2,30 @@ call plug#begin()
 Plug 'sjl/badwolf'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-" Plug 'neomake/neomake'
-" Plug 'ncm2/ncm2'
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2'
+    Plug 'ncm2/ncm2-bufword'
+    Plug 'ncm2/ncm2-path'
+    Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
+    Plug 'ncm2/ncm2-pyclang'
+    Plug 'ncm2/ncm2-match-highlight'
+    Plug 'ncm2/ncm2-ultisnips'
+    Plug 'ncm2/ncm2-html-subscope'
+    Plug 'ncm2/ncm2-markdown-subscope'
+    Plug 'ncm2/ncm2-bufword'
+    Plug 'ncm2/ncm2-jedi'
+    Plug 'ncm2/ncm2-cssomni'
+
 
 " " LANGUAGE CLIENT
-" Plug 'autozimu/LanguageClient-neovim', { 
-"     \ 'branch': 'next',
-"     \ 'do': 'bash install.sh',
-"     \ }
-" " (Optional) Completion integration with deoplete.
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'sebastianmarkow/deoplete-rust'
-" Plug 'Shougo/deoplete-clangx'
-" Plug 'zchee/deoplete-jedi'
-" " (Optional) Multi-entry selection UI.
-
+Plug 'autozimu/LanguageClient-neovim', { 
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 " Plug 'rust-lang/rust.vim'
 
 " " (Optional) Multi-entry selection UI.
@@ -25,8 +34,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'Shougo/echodoc.vim'
 
 " " Plug 'itchyny/lightline.vim'
-" Plug 'vim-airline/vim-airline'
-" Plug 'nathanaelkane/vim-indent-guides'
+Plug 'vim-airline/vim-airline'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Browser things
 
@@ -41,7 +50,7 @@ Plug 'sjl/gundo.vim'
 
 " Plug 'easymotion/vim-easymotion'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown', {'for' : 'markdown'}
 call plug#end()
 
 " some core stuff
@@ -63,7 +72,6 @@ set smartcase
 set hlsearch
 set incsearch
 set showmatch
-set termguicolors
 set showcmd
 
 " Indentation
@@ -76,6 +84,7 @@ set shiftwidth=4
 set shiftround
 set smarttab
 filetype plugin indent on
+set colorcolumn=80
 
 " Folding
 set foldenable
