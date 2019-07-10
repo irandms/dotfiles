@@ -1,10 +1,6 @@
 alias vim="nvim"
-
 alias batstat="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 alias lla="ls -lah"
 alias l.="ls -d .*"
 alias c="clear"
-alias diff="colordiff"
-alias irc="ssh -t mosssp@flip3.engr.oregonstate.edu screen -dr irc"
 alias svi="sudo vim"
-eval $(thefuck --alias)

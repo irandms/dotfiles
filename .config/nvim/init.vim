@@ -3,9 +3,6 @@ Plug 'sjl/badwolf'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
     Plug 'ncm2/ncm2-bufword'
@@ -13,7 +10,6 @@ Plug 'ncm2/ncm2'
     Plug 'ncm2/ncm2-syntax' | Plug 'Shougo/neco-syntax'
     Plug 'ncm2/ncm2-pyclang'
     Plug 'ncm2/ncm2-match-highlight'
-    Plug 'ncm2/ncm2-ultisnips'
     Plug 'ncm2/ncm2-html-subscope'
     Plug 'ncm2/ncm2-markdown-subscope'
     Plug 'ncm2/ncm2-bufword'
@@ -100,6 +96,8 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,*.o
 " Show whitespace
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+set clipboard=unnamedplus
 
 runtime binds.vim
 runtime plugins.vim

@@ -51,13 +51,18 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git catimg common-aliases dnf)
+plugins=(git common-aliases)
 
 # User configuration
 source ~/.aliases
 
-export RISCV=$HOME/riscv
-export PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$RISCV/bin
+export RISCV_PATH=$HOME/riscv/riscv64-unknown-elf-gcc-8.2.0-2019.02.0-x86_64-linux-centos6
+export RISCV_OPENOCD_PATH=$HOME/riscv/riscv-openocd-0.10.0-2019.02.0-x86_64-linux-centos6
+
+export CC_riscv32imac_unknown_none_elf=$RISCV_PATH/bin/riscv64-unknown-elf-gcc
+export AR_riscv32imac_unknown_none_elf=$RISCV_PATH/bin/riscv64-unknown-elf-gcc-ar
+
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:/usr/local/diamond/3.9_x64/bin/lin64:/opt/intel/intelFPGA_lite/16.1/modelsim_ase/bin:$RISCV_PATH/bin:$RISCV_OPENOCD_PATH/bin
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export DEVKITPRO=$HOME/devkitPro
 export DEVKITARM=$HOME/devkitPro/devkitARM
@@ -67,7 +72,6 @@ setopt extended_glob
 # pl9k
 export DEFAULT_USER=irandms
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-
 
 # oh-my-zsh stuff
 
@@ -82,6 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -101,4 +106,4 @@ source $ZSH/oh-my-zsh.sh
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
-export LFS=/mnt/lfs
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
