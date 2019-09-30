@@ -1,0 +1,14 @@
+" Show whitespace
+set list
+set listchars=eol:↵,nbsp:◦,tab:―→,trail:⮿,extends:⮚,precedes:⮘
+set list " Show problematic characters.
+
+" Indentation
+set backspace=indent,eol,start
+set autoindent
+set copyindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set shiftround
+set smarttab

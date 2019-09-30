@@ -1,0 +1,3 @@
+" Permanent undo
+set undodir=~/.vimdid
+set undofile

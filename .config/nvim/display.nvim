@@ -1,0 +1,7 @@
+colorscheme badwolf
+syntax enable
+set showmatch
+set nu
+set rnu
+set colorcolumn=80
+set signcolumn=yes
